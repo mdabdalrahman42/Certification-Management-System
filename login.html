@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            document.getElementById("error_message").innerHTML = "";
+            var id = document.getElementById("id").value;
+            var password = document.getElementById("password").value;
+            if (id === "") {
+                document.getElementById("error_message").innerHTML = "ID should not be empty!!!";
+                return false;
+            }
+            if (password === "") {
+                document.getElementById("error_message").innerHTML = "Password should not be empty!!!";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-primary" href="#">
+                        <img src="images/logo.png" alt="Logo" class="logo">CloudVault
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse links" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="registration.html">Signup</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid" style="min-height: 82vh;">
+            <div class="row justify-content-center align-items-center" style="min-height: 82vh;">
+                <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1">
+
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <header>Login</header>
+                            </div>
+                        </div>
+                        <form onsubmit="return validateForm()" method="POST" action="login.php" class="form">
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="input-box">
+                                        <label>ID<span class="req"> *</span></label>
+                                        <input type="text" placeholder="Enter your college ID" id="id" name="id" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-box">
+                                        <label>Password<span class="req"> *</span></label>
+                                        <input type="password" placeholder="Enter password" id="password" name="password" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col text-center">
+                                    <div id="error_message" class="error text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <button type="submit">Login</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <div class="login">
+                                        <label>Don't have an account? <a href="registration.html">Register here</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

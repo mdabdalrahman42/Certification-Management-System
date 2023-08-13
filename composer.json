@@ -1,0 +1,17 @@
+{
+    "name": "mdabd/certifications",
+    "autoload": {
+        "psr-4": {
+            "Mdabd\\Certifications\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abd AlRahman Mohammad",
+            "email": "mdabdalrahman2002@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^7.1"
+    }
+}
